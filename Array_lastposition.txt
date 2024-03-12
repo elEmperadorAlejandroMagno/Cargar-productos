@@ -1,0 +1,14 @@
+Hello, this is Bing. To get the last value of i on an array and show items from that position in JavaScript, you can use different methods depending on your needs. Here are some possible solutions:
+
+- If you want to get the last value of i on an array, you can use the length property of the array and subtract 1, since the array index starts from 0. For example, if you have an array called arr, you can get the last value of i as arr.length - 1. You can then use this value to access the last element of the array, such as arr [arr.length - 1] ¹.
+- If you want to show items from the last position of the array, you can use the slice method of the array and pass a negative value as the start parameter, which means the offset from the end of the array. For example, if you have an array called arr, you can show items from the last position as arr.slice (-1), which will return a new array with only the last element. You can also pass a second parameter to the slice method to specify the end position, which is exclusive. For example, if you want to show the last two items of the array, you can use arr.slice (-2) ².
+- If you want to show items from a specific position to the end of the array, you can use the slice method of the array and pass the position as the start parameter, which means the offset from the beginning of the array. For example, if you have an array called arr and a variable called i that holds the position, you can show items from that position as arr.slice (i), which will return a new array with the elements from i to the end of the array. You can also pass a second parameter to the slice method to specify the end position, which is exclusive. For example, if you want to show items from i to i + 2, you can use arr.slice (i, i + 2) ².
+
+I hope this information is useful to you. If you want to see more code examples, you can visit the links that I have provided. 😊
+
+Origen: Conversación con Bing, 24/1/2024
+(1) javascript - Get the last item in an array - Stack Overflow. https://stackoverflow.com/questions/3216013/get-the-last-item-in-an-array.
+(2) Solved: Get Last Item in Array - Power Platform Community. https://powerusers.microsoft.com/t5/Building-Flows/Get-Last-Item-in-Array/td-p/664849.
+(3) How to get the last element of the array in javascript. https://learnersbucket.com/examples/array/how-to-get-the-last-element-of-the-array-in-javascript/.
+(4) Array.prototype.findLast() - JavaScript | MDN - MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast.
+(5) How to Get the Last Item in an Array? - The Web Dev. https://thewebdev.info/2021/02/14/how-to-get-the-last-item-in-an-array/.

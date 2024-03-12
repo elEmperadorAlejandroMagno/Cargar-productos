@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ededed;
+  font-family: monospace;
+  text-align: center;
+}
+nav {
+  background-color: #000;
+  color: #fff;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos-A, .productos-B {
+  width: 100%;
+  min-height: 300px;
+}
+.productos-A {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 1300px;
+}
+
+.productos-B {
+  background-color: #333;
+}
+
+.picantes {
+  background-color: #dddd;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+span button {
+  padding: 4px;
+}
+
+.producto_picante {
+  border: 2px solid #000;
+  margin-bottom: 20px;
+  overflow: hidden;
+  &:hover {
+    border: 2px solid #6f9;
+    cursor: pointer;
+  }
+}
+
+.producto_picante img {
+  max-width: 200px;
+}
+
+.verMas {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #000;
+  outline: none;
+  border: solid 2px #000;
+  box-shadow: 4px 4px 10px #000;
+  width: 120px;
+  &:hover{
+    background-color: #9fe;
+    cursor: pointer;
+  }
+}
