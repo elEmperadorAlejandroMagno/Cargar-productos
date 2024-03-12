@@ -42,21 +42,22 @@ function crearNuevoProducto ( imagen, nombre, precio ) {
   const cargarProductos = async num => {
     const request = await fetch('http://localhost:1234/products?type=salsa');
     const res = await request.json();
+    console.log("magno", res)
     const arr = res;
     console.log(arr)
 
     const documentFragment = document.createDocumentFragment();
     for (let i = 0; i < num; i++) {
-      const nuevoProducto = crearNuevoProducto(arr[1].imagen, arr[1].nombre, arr[1].precio);
+      const nuevoProducto = crearNuevoProducto(arr[i]?.imagen, arr[i]?.nombre, arr[i]?.precio);
       documentFragment.appendChild(nuevoProducto);
     }
     listaProductos.appendChild(documentFragment);
   }
   
-let contador = 3;
+let contador = 2;
 cargarProductos(contador);
 
-let position = 3;
+let position = 2;
 
 async function cargarMasProductos(num) {
   const moreProducts = await cargarProductos();
@@ -72,7 +73,7 @@ async function cargarMasProductos(num) {
   console.log(newArr)
     const documentFragment = document.createDocumentFragment();
     for (let i = 0; i < num; i++) {
-      const nuevoProducto = crearNuevoProducto(newArr[0].imagen, newArr[0].nombre, newArr[0].precio);
+      const nuevoProducto = crearNuevoProducto(newArr[i].imagen, newArr[i].nombre, newArr[i].precio);
       documentFragment.appendChild(nuevoProducto);
     }
     listaProductos.appendChild(documentFragment);
@@ -83,5 +84,4 @@ verMasButton.addEventListener('click', () => {
   cargarMasProductos(contador);
   position++;
   position++;
-
 })
