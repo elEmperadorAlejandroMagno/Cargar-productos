@@ -9,7 +9,10 @@
 <body>
   <div class="flex-container">
     <aside>
-      <h3>Sección</h3>
+      <span>
+        <h3><a class="prev-button" href="index.html"><</a></h3>
+        <h3>Sección</h3>
+      </span>
       <hr>
       <ul>
         <li>Productos</li>
@@ -17,13 +20,55 @@
       </ul>
     </aside>
     <main>
-      <h2>Nombre de la sección</h2>
+      <h2 class="tittle">Nombre de la sección</h2>
       <div class="content-container">
+        <label id="search-label" for="search">
+          <input type="search">
+          <input type="submit" value="Buscar">
+        </label>
         <div class="content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quos quod magnam ipsa perspiciatis optio natus quo excepturi laboriosam eius! Consequatur, impedit mollitia ipsum suscipit sunt praesentium dignissimos quas. Vitae!
+
+        </div>
+      <span class="addbtn-container">
+        <button id="addbtn" class="open-modal">Agregar producto +</button>
+      </span>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt quos quod magnam ipsa perspiciatis optio natus quo excepturi laboriosam eius! Consequatur, impedit mollitia ipsum suscipit sunt praesentium dignissimos quas. Vitae!</p>
+
+      <div class="adm-board-modal-bg" style="display: none;">
+        <div class="adm-board-modal" style="display: none;">
+          <span>
+            <h2>Nuevo producto</h2>
+            <i class="close-modal">X</i>
+          </span>
+          <div class="img-modal">
+            <img src="#" alt="imagen de producto">
+          </div>
+          <div class="detail-product-modal">
+            <span class="input_span">
+              <h3>Nombre</h3>
+            <input type="text" name="productName" id="#pName">
+            </span>
+            <span class="input_span">
+              <p>tipo</p>
+              <select name="productType" id="#pType">
+                <option value="Salsa">Salsa</option>
+                <option value="Merch">Merch</option>
+              </select>
+            </span>
+            <span class="input_span">
+              <p>precio $URU</p>
+              <input type="text">
+            </span>
+            <span class="input_span">
+              <p>cantidad</p>
+              <input type="number" min="1" max="10">
+            </span>
+          </div>
+          <button id="addbtn" class="create-product">Crear producto</button>
         </div>
       </div>
     </main>
   </div>
+  <script src="script_admin-board.js"></script>
 </body>
 </html>

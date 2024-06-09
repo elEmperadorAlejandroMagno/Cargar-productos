@@ -18,8 +18,9 @@ main {
   width: 90%;
   text-align: center;
 }
-main h2 {
+main .tittle {
   margin: 20px 0px;
+  padding: 4px 10px;
 }
 
 aside {
@@ -30,7 +31,12 @@ aside {
   color: #fff;
   text-align: center;
 }
+aside span {
+  display: flex;
+  gap: 80px;
+}
 aside h3 {
+  padding: 8px 4px;
   margin: 10px 0px;
 }
 aside ul {
@@ -42,4 +48,120 @@ aside ul li {
     color: #9af88b;
     cursor: pointer;
   }
+}
+h3 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    color: #9af88b;
+  }
+}
+
+.content {
+  min-height: 100vh;
+  padding: 20px 20px;
+}
+
+.info-product-container {
+  background-color: #fff;
+  padding: 8px 20px;
+  margin: auto;
+  display: flex;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.info-product-container h3, .precio-product {
+  margin: auto;
+}
+.info-product-container button {
+  background-color: inherit;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  border: none;
+  &:hover {
+    color: #9af88b;
+    cursor: pointer;
+  }
+}
+.info-product-container img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 20px;
+}
+
+.addbtn-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 16px 28px;
+}
+
+#addbtn {
+  background-color:  #5ad847 ;
+  border-radius: 10px;
+  padding: 8px 14px;
+  border: none;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    background-color:#9af88b;
+  }
+}
+
+.adm-board-modal-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  display: none;
+  transition: all 2s;
+}
+
+
+.adm-board-modal {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 650px;
+  height: 400px;
+  margin: 80px auto;
+  transition: all 2s;
+}
+
+
+.adm-board-modal span {
+  display: flex;
+  justify-content: center;
+}
+.adm-board-modal span h2 {
+  width: 620px;
+}
+.adm-board-modal span i {
+  position: relative;
+  padding: 4px 0px;
+  width: 30px;
+  border-radius: 0px 10px 0px 0px;
+  &:hover {
+    background-color: #f99;
+    cursor: pointer;
+  }
+}
+.img-modal {
+  margin: 20px auto;
+  width: 200px;
+  min-height: 80px;
+  background-color: #ddd;
+}
+
+.detail-product-modal {
+  width: 400px;
+  min-height: 120px;
+  margin: 20px auto;
+  background-color: #aaa;
+  line-height: 3em;
 }
