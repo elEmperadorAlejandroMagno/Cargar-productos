@@ -49,7 +49,8 @@ async function cargarMasProductos(num) {
   // const moreProducts = await cargarProductos();
   const request = await fetch('http://localhost:1234/products?type=salsa');
   const res = await request.json();
-  const arr = res;
+  const arr = [...res];
+
     let newArr = arr.slice(position);
     position + 3;
   if (newArr.length == 3) verMasButton.style.display = "none";
@@ -64,6 +65,5 @@ async function cargarMasProductos(num) {
 
 verMasButton.addEventListener('click', () => {
   cargarMasProductos(contador);
-  position++;
-  position++;
+  position + 2;
 })
